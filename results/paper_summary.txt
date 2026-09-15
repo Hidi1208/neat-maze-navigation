@@ -1,0 +1,66 @@
+NEAT DRONE GENERALISATION — FULL PAPER SUMMARY
+=======================================================
+
+ABSTRACT RECAP
+----------------------------------------
+NEAT is independently applied to 100 simulated maze puzzles.
+The best-performing genome from each run is extracted.
+These 100 genomes are averaged to form a single generalised controller.
+The controller is then tested on an unseen 101st maze.
+
+ENVIRONMENT
+----------------------------------------
+Simulator    : Custom Python/Pygame drone simulator
+Maze size    : 1000 x 600 pixels
+Obstacles    : Procedurally generated vertical walls with gaps
+Sensors      : 7-ray LIDAR (ray scattering) at angles [-70, -40, -15, 0, 15, 40, 70] degrees
+Control      : Hybrid (goal-directed autopilot + NEAT correction)
+Inputs       : 7 LIDAR readings + goal dx + goal dy + angle + velocity = 11
+Outputs      : 1 (steering correction)
+
+TRAINING
+----------------------------------------
+Training mazes     : 100 (procedurally generated, seeds 1-100)
+NEAT runs          : 100 (one independent run per maze)
+Best fitness mean  : 7234.98
+Best fitness std   : 4689.77
+Best fitness min   : 305.66
+Best fitness max   : 16740.87
+Best fitness median: 9399.20
+
+GENOME AGGREGATION
+----------------------------------------
+Genomes aggregated          : 100
+Majority threshold          : 30% (30 genomes)
+Unique connections found    : 196
+Connections included        : 11
+Connections excluded        : 185
+Unique nodes found          : 81
+Nodes included              : 1
+Mean weight std dev         : 1.2754
+  (measures disagreement between genomes — lower = more consensus)
+
+GENERALISATION TEST — MAZE 101 (UNSEEN)
+----------------------------------------
+Test maze              : Maze 101 (never seen during training)
+Goal reached           : NO
+Frames survived        : 130 / 600
+Closest to goal        : 618.31 px
+Cause of termination   : wall_collision
+Aggregated genome nodes: 1
+Aggregated genome conns: 11
+
+INTERPRETATION
+----------------------------------------
+The aggregated genome did not reach the goal in the unseen maze.
+However, it survived 130 frames and reached
+within 618.31 px of the goal.
+This indicates partial generalisation. Further training iterations
+or a lower majority threshold may improve cross-environment transfer.
+
+CHARTS GENERATED (all in results/)
+----------------------------------------
+  fitness_distribution.png  — histogram of fitness across 100 mazes
+  fitness_per_maze.png      — bar chart, fitness per maze
+  topology_stats.png        — node/connection distributions
+  test_result_card.png      — clean summary card for paper

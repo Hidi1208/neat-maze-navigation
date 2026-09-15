@@ -1,0 +1,17 @@
+{
+  "n_genomes": 100,
+  "majority_threshold_pct": 30.0,
+  "total_unique_connections": 196,
+  "connections_included": 11,
+  "connections_excluded": 185,
+  "total_unique_nodes": 81,
+  "nodes_included": 1,
+  "weight_std_mean": 1.2753604720598781,
+  "fitness_stats": {
+    "mean": 7234.9829,
+    "std": 4689.7695,
+    "min": 305.6649,
+    "max": 16740.8715,
+    "median": 9399.2007
+  }
+}

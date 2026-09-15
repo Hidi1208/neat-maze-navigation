@@ -1,0 +1,21 @@
+NEAT DRONE — GENERALISATION TEST RESULT
+==================================================
+
+Research Question:
+  Can a genome aggregated from 100 independent NEAT
+  training runs navigate an unseen maze environment?
+
+Method: Genome Aggregation
+  Training mazes   : 100 (mazes 1-100)
+  Test maze        : maze 101 (never seen during training)
+  Aggregation      : Weight averaging (majority threshold 30%)
+
+Result:
+  Goal reached     : NO
+  Frames survived  : 130 / 600
+  Closest to goal  : 618.31 px
+  Ended by         : wall_collision
+
+Aggregated Genome Topology:
+  Nodes       : 1
+  Connections : 11

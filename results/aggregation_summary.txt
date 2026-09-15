@@ -1,0 +1,23 @@
+GENOME AGGREGATION SUMMARY
+=============================================
+
+Genomes aggregated     : 100
+Majority threshold     : 30% (30 genomes)
+
+CONNECTION STATISTICS
+  Unique connections found  : 196
+  Connections included       : 11
+  Connections excluded       : 185
+  Mean weight std dev        : 1.2754
+  (higher std = more disagreement between genomes)
+
+NODE STATISTICS
+  Unique nodes found         : 81
+  Nodes included             : 1
+
+TRAINING FITNESS (across 100 mazes)
+  Mean best fitness  : 7234.9829
+  Std dev            : 4689.7695
+  Min best fitness   : 305.6649
+  Max best fitness   : 16740.8715
+  Median best fitness: 9399.2007

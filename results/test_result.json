@@ -1,0 +1,13 @@
+{
+  "maze_idx": 101,
+  "method": "genome_aggregation",
+  "n_training_mazes": 100,
+  "goal_reached": false,
+  "frames_survived": 130,
+  "max_frames": 600,
+  "min_dist_to_goal_px": 618.31,
+  "cause_of_end": "wall_collision",
+  "test_duration_s": 2.14,
+  "genome_n_nodes": 1,
+  "genome_n_connections": 11
+}

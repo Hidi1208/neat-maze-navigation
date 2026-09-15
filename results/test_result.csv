@@ -1,0 +1,2 @@
+maze_idx,method,n_training_mazes,goal_reached,frames_survived,max_frames,min_dist_to_goal_px,cause_of_end,test_duration_s,genome_n_nodes,genome_n_connections
+101,genome_aggregation,100,False,130,600,618.31,wall_collision,2.14,1,11
